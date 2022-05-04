@@ -6,6 +6,8 @@ on:
     tags: [v*]
   pull_request:
     branches: [main]
+permissions:
+  contents: write
 jobs:
   build:
     runs-on: ubuntu-latest
