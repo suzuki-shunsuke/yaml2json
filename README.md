@@ -8,6 +8,11 @@ Convert YAML to JSON
 $ yaml2json input.yaml # Output JSON to standard output
 ```
 
+## Install
+
+* [GitHub Releases](https://github.com/suzuki-shunsuke/yaml2json/releases): Download asset from GitHub Releases and install the executable binary in `PATH`
+* [Homebrew](https://brew.sh/): `$ brew install suzuki-shunsuke/yaml2json/yaml2json`
+
 ## How does it work?
 
 This is very simple.
