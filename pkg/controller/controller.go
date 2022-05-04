@@ -35,7 +35,7 @@ func (ctrl *Controller) Run(ctx context.Context, param *RunParam) error {
 	if err := yaml.NewDecoder(f).Decode(&data); err != nil {
 		return fmt.Errorf("parse a file as YAML: %w", err)
 	}
-	a, err := convmap.Convert(data)
+	a, err := convmap.Convert(data, nil)
 	if err != nil {
 		return fmt.Errorf("convert map key from interface{} to string: %w", err)
 	}
