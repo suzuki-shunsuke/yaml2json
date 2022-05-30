@@ -22,7 +22,8 @@ func New(stdout io.Writer) *Controller {
 }
 
 type RunParam struct {
-	Path string
+	Path   string
+	Indent string
 }
 
 func (ctrl *Controller) Run(ctx context.Context, param *RunParam) error {
@@ -39,7 +40,9 @@ func (ctrl *Controller) Run(ctx context.Context, param *RunParam) error {
 	if err != nil {
 		return fmt.Errorf("convert map key from interface{} to string: %w", err)
 	}
-	if err := json.NewEncoder(ctrl.stdout).Encode(a); err != nil {
+	encoder := json.NewEncoder(ctrl.stdout)
+	encoder.SetIndent("", param.Indent)
+	if err := encoder.Encode(a); err != nil {
 		return fmt.Errorf("encode data as JSON: %w", err)
 	}
 	return nil
