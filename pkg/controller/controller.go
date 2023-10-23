@@ -8,7 +8,7 @@ import (
 	"os"
 
 	"github.com/suzuki-shunsuke/go-convmap/convmap"
-	"gopkg.in/yaml.v2"
+	"gopkg.in/yaml.v3"
 )
 
 type Controller struct {
