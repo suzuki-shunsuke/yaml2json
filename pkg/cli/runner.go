@@ -57,7 +57,7 @@ OPTIONS:
 
 var errFileRequired = errors.New("YAML file is required")
 
-func (runner *Runner) Run(ctx context.Context, args ...string) error {
+func (runner *Runner) Run(ctx context.Context, _ ...string) error {
 	ctrl := controller.New(os.Stdout)
 	param := &controller.RunParam{}
 	verFlag, helpFlag := false, false

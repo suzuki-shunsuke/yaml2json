@@ -26,7 +26,7 @@ type RunParam struct {
 	Indent string
 }
 
-func (ctrl *Controller) Run(ctx context.Context, param *RunParam) error {
+func (ctrl *Controller) Run(_ context.Context, param *RunParam) error {
 	f, err := os.Open(param.Path)
 	if err != nil {
 		return fmt.Errorf("open a file: %w", err)
